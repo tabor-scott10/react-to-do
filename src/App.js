@@ -38,10 +38,12 @@ class App extends Component {
     console.log('deleteToDo executed!')
 
 
-    const filterToDo = this.state.todos.filter( (todos => todos !== todos[index]))
+    const todos = this.state.todos.filter( (todo => todo !== this.state.todos[index]))
+    console.log(todos)
 
 
-    this.setState({ todos: filterToDo });
+    this.setState({ todos: todos });
+    console.log(todos)
     //This is now setting the state of the old list of todos to the new list of todos without the recently deleted one
 
   };
